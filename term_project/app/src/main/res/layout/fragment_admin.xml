@@ -1,0 +1,584 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.AdminFragment"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal"
+            >
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/logo2"
+                android:layout_gravity="center"
+                android:layout_marginLeft="40dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Administrator"
+
+                android:textColor="#E8A72D"
+                android:layout_gravity="center"
+                android:layout_marginLeft="40dp"
+                android:textSize="30dp"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp">
+            <Button
+                android:id="@+id/userBtn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                android:layout_gravity="center"
+                android:text="User list"
+                android:textAllCaps="false"
+                android:textSize="20dp"
+                android:textColor="@color/black"
+                android:drawableRight="@drawable/backarrow"
+                android:paddingRight="20dp"
+                android:layout_weight="1"
+                android:layout_marginRight="5dp"
+                />
+            <Button
+                android:id="@+id/buildingBtn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+
+                android:layout_weight="1"
+                android:text="Building list"
+                android:textAllCaps="false"
+                android:textSize="20dp"
+                android:textColor="@color/black"
+                android:drawableRight="@drawable/backarrow"
+                android:paddingRight="20dp"
+                android:layout_marginLeft="5dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp">
+            <Button
+                android:id="@+id/teamBtn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+
+                android:text="Team list"
+                android:textAllCaps="false"
+                android:textSize="20dp"
+                android:textColor="@color/black"
+                android:drawableRight="@drawable/backarrow"
+                android:paddingRight="20dp"
+                android:layout_weight="1"
+                android:layout_marginRight="5dp"/>
+            <Button
+                android:id="@+id/roadBtn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:text="Road list"
+                android:textAllCaps="false"
+                android:textSize="20dp"
+                android:textColor="@color/black"
+                android:drawableRight="@drawable/backarrow"
+                android:paddingRight="20dp"
+                android:layout_marginLeft="5dp"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp">
+            <Button
+                android:id="@+id/GroupBtn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Group list"
+                android:textAllCaps="false"
+                android:textSize="20dp"
+                android:textColor="@color/black"
+                android:drawableRight="@drawable/backarrow"
+                android:paddingRight="20dp"
+                android:layout_weight="1"
+                android:layout_marginRight="5dp"
+                />
+            <Button
+                android:id="@+id/deleteBtn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Delete Datasets"
+                android:textAllCaps="false"
+                android:textSize="20dp"
+                android:textColor="@color/black"
+
+                android:paddingRight="20dp"
+                android:layout_weight="1"
+                android:layout_marginRight="5dp"
+                />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="silivri lat = 41.0730 silivri long = 28.2466"
+            android:textColor="@color/black"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp">
+
+        <EditText
+            android:id="@+id/etLat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:hint="lat"
+            android:textSize="20dp"
+            android:inputType="text"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            />
+        <EditText
+            android:id="@+id/etLong"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:hint="long"
+            android:textSize="20dp"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            />
+    </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp">
+
+            <EditText
+                android:id="@+id/etDistance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:hint="distance"
+                android:textSize="20dp"
+                android:inputType="text"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                />
+            <EditText
+                android:id="@+id/etCount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:hint="count"
+                android:textSize="20dp"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                />
+        </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="4"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp">
+        <Button
+            android:id="@+id/createBuildingBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Create Building"
+            android:textAllCaps="false"
+            android:layout_gravity="center"
+            android:textSize="18dp"
+            android:layout_weight="1"/>
+        <Button
+            android:id="@+id/createUserBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Create User"
+            android:textAllCaps="false"
+            android:layout_gravity="center"
+            android:textSize="18dp"
+            android:layout_weight="1"/>
+        <Button
+            android:id="@+id/createTeamBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Create Team"
+            android:textAllCaps="false"
+            android:layout_gravity="center"
+            android:textSize="18dp"
+            android:layout_weight="1"/>
+        <Button
+            android:id="@+id/createGroupBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Create Group"
+            android:textAllCaps="false"
+            android:layout_gravity="center"
+            android:textSize="18dp"
+            android:layout_weight="1"/>
+    </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp">
+
+            <EditText
+                android:id="@+id/etTeamId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:hint="team id"
+                android:textSize="20dp"
+                android:inputType="text"
+                android:layout_marginRight="5dp"
+                android:layout_weight="3"
+                />
+
+            <Button
+                android:id="@+id/createRoadBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Create Road"
+                android:textAllCaps="false"
+                android:layout_gravity="center"
+                android:textSize="18dp"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp">
+
+            <EditText
+                android:id="@+id/etUserId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:hint="id"
+                android:textSize="20dp"
+                android:inputType="text"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                />
+            <EditText
+                android:id="@+id/etUserName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:hint="name"
+                android:textSize="20dp"
+                android:inputType="text"
+                android:layout_marginRight="5dp"
+                android:layout_weight="2"
+                />
+
+            <EditText
+                android:id="@+id/etUserPassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:hint="password"
+                android:textSize="20dp"
+                android:inputType="text"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                />
+            <Button
+                android:id="@+id/UpdateUserBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="update"
+                android:textAllCaps="false"
+                android:layout_gravity="center"
+                android:textSize="18dp"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="270dp"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp">
+
+                <EditText
+                    android:id="@+id/etTeam_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:hint="team id"
+                    android:textSize="20dp"
+                    android:inputType="text"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="3"
+                    />
+
+                <Button
+                    android:id="@+id/testBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Algorithm Test"
+                    android:textAllCaps="false"
+                    android:layout_gravity="center"
+                    android:textSize="18dp"
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp">
+
+                <EditText
+                    android:id="@+id/etcompleteTeam"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:hint="team id"
+                    android:textSize="20dp"
+                    android:inputType="text"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    />
+                <EditText
+                    android:id="@+id/etCompleteBuilding"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:hint="building id"
+                    android:textSize="20dp"
+                    android:inputType="text"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    />
+
+                <Button
+                    android:id="@+id/completeBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Complete"
+                    android:textAllCaps="false"
+                    android:layout_gravity="center"
+                    android:textSize="18dp"
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:visibility="visible">
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:paddingLeft="10dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            >
+                            <TextView
+                                android:layout_width="110dp"
+                                android:layout_height="wrap_content"
+                                android:text="id:"
+                                />
+                            <TextView
+                                android:id="@+id/tvBuildingId"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="bina id'si"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            >
+                            <TextView
+                                android:layout_width="110dp"
+                                android:layout_height="wrap_content"
+                                android:text="address:"
+                                />
+                            <TextView
+                                android:id="@+id/tvAdress"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="bina adresi"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            >
+                            <TextView
+                                android:layout_width="110dp"
+                                android:layout_height="wrap_content"
+                                android:text="time:"
+                                />
+                            <TextView
+                                android:id="@+id/tvTime"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="dakika"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            >
+                            <TextView
+                                android:layout_width="110dp"
+                                android:layout_height="wrap_content"
+                                android:text="person count:"
+                                />
+                            <TextView
+                                android:id="@+id/tvPersoncount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="insan sayısı"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            >
+                            <TextView
+                                android:layout_width="110dp"
+                                android:layout_height="wrap_content"
+                                android:text="destroy time:"
+                                />
+                            <TextView
+                                android:id="@+id/tvCreated"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="yıkıldığı zaman"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            >
+                            <TextView
+                                android:layout_width="110dp"
+                                android:layout_height="wrap_content"
+                                android:text="team count:"
+                                />
+                            <TextView
+                                android:id="@+id/tvCount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="ekipteki kişi sayısı"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            >
+                            <TextView
+                                android:layout_width="110dp"
+                                android:layout_height="wrap_content"
+                                android:text="destroyed roads:"
+                                />
+                            <TextView
+                                android:id="@+id/tvDestroyedRoad"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="yıkılan yollar"/>
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </ScrollView>
+
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone"/>
+
+
+
+
+
+
+    </LinearLayout>
+
+</FrameLayout>
